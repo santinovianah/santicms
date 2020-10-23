@@ -1,9 +1,6 @@
+@extends('kuishome')
 
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+@section('kuisabout')
 <style type="text/css">
 .gus img{
 	width: 40%;
@@ -12,51 +9,7 @@
 }
 </style>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Blog Home - Start Bootstrap Template</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="css/blog-home.css" rel="stylesheet">
-
-</head>
-
-<body>
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-          <li class="nav-item ">
-            <a class="nav-link" href="kuishome">Home</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="kuisabout">About</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="kuisinfo">info</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="kuiskontak">Kontak</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Page Content -->
-  @yield('title')
+<!-- Page Content -->
   <div class="container">
 
     <div class="row">
@@ -77,10 +30,7 @@
             <p class="card-text">{{$ka->content}}</p>
           </div>
           
-          <div class="card-footer text-muted">
-            Posted on January 1, 2020 by
-            <a href="#">Start Bootstrap</a>
-          </div>
+
           
         </div>
         <div class="gus"><img src="img/gus.png">
@@ -91,12 +41,7 @@
 
         <!-- Pagination -->
         <ul class="pagination justify-content-center mb-4">
-          <li class="page-item">
-            <a class="page-link" href="#">&larr; Older</a>
-          </li>
-          <li class="page-item disabled">
-            <a class="page-link" href="#">Newer &rarr;</a>
-          </li>
+
         </ul>
 
       </div>
@@ -121,11 +66,4 @@
     </div>
     <!-- /.container -->
   </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-</body>
-
-</html>
+@endsection

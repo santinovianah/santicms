@@ -1,10 +1,8 @@
 @extends('kuishome')
-@section('kuisinfo')
 
-
-
+@section('wisata')
  <!-- Page Content -->
- @yield('title')
+
   <div class="container">
 
     <div class="row">
@@ -13,23 +11,44 @@
       
       <div class="col-md-8">
 
-        <h1 class="my-4">3 Wisata
+        <h1 class="my-4">Wisata
           <small>Wajib di Kunjungi</small>
         </h1>
         
         <!-- Blog Post -->
-        @foreach($kuisinfo as $ki)
+
         <div class="card mb-4">
           <div class="card-body">
-          <img class="card-img-top" src="{{$ki->featured_image}}" alt="Card image cap">
-            <h2 class="card-title">{{$ki->title}}</h2>
-            <p class="card-text">{{$ki->content}}</p>
+          <a href="wisata/add" class="btn btn-primary">+Tambah Data</a>
+
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<th>No</th>
+<th>Judul</th>
+<th>Tanggal</th>
+<th>Opsi</th>
+</tr>
+</thead>
+<tbody>
+@foreach($wisata as $a)
+<tr>
+<td>{{$a->id}}</td>
+<td>{{$a->title}}</td>
+<td>{{$a->created_at}}</td>
+<td><a href="wisata/edit/{{ $a->id }}" ><img src="img/editt.png">
+<a href="delete/{{ $a->id }}" ><img src="img/hapuss.png"></td>
+
+</tr>
+@endforeach
+</tbody>
+</table>
+            <h2 class="card-title"></h2>
+            <p class="card-text"></p>
             
           </div>
           
         </div>
-        
-        @endforeach
 
         
         
@@ -37,7 +56,7 @@
         <!-- Pagination -->
         <ul class="pagination justify-content-center mb-4">
 
-      
+        
 
       </div>
 
@@ -68,7 +87,7 @@
                     <a href="kuismakanan">Makanan</a>
                   </li>
                   <li>
-                    <a href="kuiswisata">Wisata</a>
+                    <a href="kuisinfo">Wisata</a>
                   </li>
 
                 </ul>
@@ -113,6 +132,5 @@
     </div>
     <!-- /.container -->
   </footer>
-
 
 @endsection

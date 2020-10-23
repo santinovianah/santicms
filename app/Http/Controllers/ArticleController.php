@@ -7,13 +7,24 @@ use App\Article;
 
 class ArticleController extends Controller
 {
-    public function article(){
-		return view('article');
-    }
-    
+  public function index(){
+  $article = Article::all();
+  return view('manage',['article' => $article]);
+  }
 
-    public function getById($id){
-      $Article = Article::find($id);
-      return view('master',['Article=> $Article']);
-      }
+  public function add(){
+  return view('addarticle');
+  }
+ 
+//   public function create(Request $request)
+//  {
+//  Article::create([
+//  'title' => $request->title,
+//  'content' => $request->content,
+//  'featured_image' => $request->image
+//  ]);
+//  return redirect('/manage');
+//  }
+   
+
 }

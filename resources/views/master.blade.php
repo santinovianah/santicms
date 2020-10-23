@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Blog Home - Start Bootstrap Template</title>
+  <title>info pasuruan</title>
 
   <!-- Bootstrap core CSS -->
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,61 +23,66 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <a class="navbar-brand" href="#">DINAS KEBUDAYAAN DAN PARIWISATA KABUPATEN PASURUAN</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="home">Home</a>
+          <li class="nav-item ">
+            <a class="nav-link" href="kuishome">Home</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="article">Article</a>
+            <a class="nav-link" href="kuisabout">About</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="kuisinfo">info</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="kuiskontak">Kontak</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-
+  
   <!-- Page Content -->
+  @yield('title')
   <div class="container">
 
     <div class="row">
-
+    
       <!-- Blog Entries Column -->
+      
       <div class="col-md-8">
 
-        <h1 class="my-4">Praktikum 4
-          <small>{{$Article->id}}</small>
+        <h1 class="my-4">3 Makanan
+          <small>Wajib Di Coba</small>
         </h1>
-
+        
         <!-- Blog Post -->
+        
         <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+        
           <div class="card-body">
-		  @foreach
-            <h2 class="card-title">{{$Article->title}}</h2>
-            <p class="card-text">{{$Article->content}}</p>
-			@endforeach
-            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+         @yield('content')
+            <h2 class="card-title"></h2>
+            <p class="card-text"></p>
+            
+ 
           </div>
-          <div class="card-footer text-muted">
-            Posted on January 1, 2020 by
-            <a href="#">Start Bootstrap</a>
-          </div>
+
         </div>
 
+
+
         
+        
+
         <!-- Pagination -->
+        <div class="col-md-4">
         <ul class="pagination justify-content-center mb-4">
-          <li class="page-item">
-            <a class="page-link" href="#">&larr; Older</a>
-          </li>
-          <li class="page-item disabled">
-            <a class="page-link" href="#">Newer &rarr;</a>
-          </li>
-        </ul>
+        
 
       </div>
 
@@ -105,28 +109,23 @@
             <div class="row">
               <div class="col-lg-6">
                 <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#">Web Design</a>
+                <li>
+                    <a href="kuismakanan">Makanan</a>
                   </li>
                   <li>
-                    <a href="#">HTML</a>
-                  </li>
-                  <li>
-                    <a href="#">Freebies</a>
+                    <a href="kuiswisata">Wisata</a>
                   </li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#">JavaScript</a>
+                <li>
+                    <a href="kuissejarah">Sejarah</a>
                   </li>
                   <li>
-                    <a href="#">CSS</a>
+                    <a href="kuisvisimisi">Visi Misi</a>
                   </li>
-                  <li>
-                    <a href="#">Tutorials</a>
-                  </li>
+
                 </ul>
               </div>
             </div>
@@ -135,15 +134,17 @@
 
         <!-- Side Widget -->
         <div class="card my-4">
-          <h5 class="card-header">Side Widget</h5>
+          <h5 class="card-header">Sekilias Info</h5>
           <div class="card-body">
-            You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+          
           </div>
         </div>
+            
 
       </div>
 
     </div>
+
     <!-- /.row -->
 
   </div>
@@ -156,6 +157,7 @@
     </div>
     <!-- /.container -->
   </footer>
+
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>

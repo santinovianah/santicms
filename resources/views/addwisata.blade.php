@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,49 +42,51 @@
   </nav>
 
   <!-- Page Content -->
-  @yield('title')
   <div class="container">
 
     <div class="row">
 
-     
       <!-- Blog Entries Column -->
       <div class="col-md-8">
 
-        <h1 class="my-4">Page Heading
-          <small>Secondary Text</small>
+        <h1 class="my-4">Praktikum 4
+          <small></small>
         </h1>
-
+        
         <!-- Blog Post -->
+        
         <div class="card mb-4">
-
+        
           <div class="card-body">
+          <form action="/wisata/create" method="post">
+ @csrf
+ <div class="form-group">
+ <label for="title">Judul</label>
+ <input type="text" class="form-control"
+required="required" name="title"></br>
+ </div>
+ <div class="form-group">
+ <label for="content">Content</label>
+ <input type="text" class="form-control"
+required="required" name="content"></br>
+ </div>
+ <div class="form-group">
+ <label for="image">Feature Image</label>
+ <input type="text" class="form-control"
+required="required" name="image"></br>
+ </div>
+ <button type="submit" name="add" class="btn btn-primary float-right">Tambah Data</button>
+ </form>
+
+          
             <h2 class="card-title"></h2>
+            <p class="card-text"></p>
           </div>
           <div class="card-footer text-muted">
-            Posted on January 1, 2020 by
-            <a href="#">Start Bootstrap</a>
           </div>
         </div>
 
-        <!-- Blog Post -->
-        <div class="card mb-4">
-
-          <div class="card-body">
-          @yield('editkontak')
-          @yield('comment')
-          @yield('content')
-
-          </div>
-          <div class="card-footer text-muted">
-            Posted on January 1, 2020 by
-            <a href="#">Start Bootstrap</a>
-          </div>
-        </div>
-
-        <!-- Blog Post -->
-</div>
-
+        
         <!-- Pagination -->
         <ul class="pagination justify-content-center mb-4">
           <li class="page-item">
@@ -95,7 +98,7 @@
         </ul>
 
       </div>
-      
+
       <!-- Sidebar Widgets Column -->
       <div class="col-md-4">
 

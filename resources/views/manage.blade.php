@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>11 Tempat Wisata di Pasuruan Terbaru & Terhits Dikunjungi</title>
+  <title>info pasuruan</title>
 
   <!-- Bootstrap core CSS -->
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
           <li class="nav-item ">
             <a class="nav-link" href="kuisabout">About</a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item active">
             <a class="nav-link" href="kuisinfo">info</a>
           </li>
           <li class="nav-item ">
@@ -56,22 +56,32 @@
       
       <div class="col-md-8">
 
-        <h1 class="my-4">11 Tempat Wisata di Pasuruan
-          <small>Terbaru & Terhits Dikunjungi</small>
+        <h1 class="my-4">3 Wisata
+          <small>Wajib di Kunjungi</small>
         </h1>
         
         <!-- Blog Post -->
-        @foreach($kuiswisata as $kw)
-        <div class="card mb-4">
-          <div class="card-body">
-          <img class="card-img-top" src="{{$kw->featured_image}}" alt="Card image cap">
-            <h2 class="card-title">{{$kw->id}}. {{$kw->title}}</h2>
-            <p class="card-text">{{$kw->content}}</p>
-            
-          </div>
+        <a href="article/add" class="btn btn-primary">Tambah Data</a>
 
-        </div>
-@endforeach
+        <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Judul</th>
+                <th>Tanggal</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach($article as $a)
+            <tr>
+                 <td>{{$a->id}}</td>
+                 <td>{{$a->title}}</td>
+                 <td>{{$a->created_at}}</td>
+            </tr>
+        @endforeach
+        </tbody>
+        </table>
+       
 
         
         
@@ -79,7 +89,7 @@
         <!-- Pagination -->
         <ul class="pagination justify-content-center mb-4">
 
-        <a href="kuisinfo" class="btn btn-primary">	&larr; Back </a>
+        <a href="kuiswisata" class="btn btn-primary">Show More &rarr;</a>
 
       </div>
 
@@ -123,7 +133,6 @@
                   <li>
                     <a href="kuisvisimisi">Visi Misi</a>
                   </li>
-
                   
                 </ul>
               </div>
@@ -138,7 +147,6 @@
           Ke pasuruan tanpa mengunjungi wisata tampak kurang pas dan berpergian anda pasti ada yang kurang, jadi berikut tempat wisata rekomendasi di kabupaten pasuruan
           </div>
         </div>
-       
             
 
       </div>

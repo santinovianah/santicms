@@ -14,3 +14,5 @@ class ArticleTableSeeder extends Seeder
         factory(App\Article::class, 5)->create();
     }
 }
+
+
