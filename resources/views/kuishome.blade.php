@@ -47,7 +47,7 @@
         <ul class="navbar-nav ml-auto">
         
           <li class="nav-item ">
-            <a class="nav-link" href="kuishome">Home</a>
+            <a class="nav-link" href="master">Home</a>
           </li>
          
           <li class="nav-item ">
@@ -83,6 +83,9 @@
       </div>
     </div>
   </nav>
+  
+  <h>
+
 @yield('kuisabout')
 @yield('kuisinfo')
 @yield('kuismakanan')
@@ -90,6 +93,8 @@
 @yield('wisata')
 @yield('kuisvisimisi')
 @yield('kontak')
+
+@yield('editwisata')
 
 
   <!-- Footer -->

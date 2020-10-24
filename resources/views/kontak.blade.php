@@ -1,7 +1,6 @@
 @extends('kuishome')
 @section('kontak')
 <!-- Page Content -->
-@yield('title')
   <div class="container">
 
     <div class="row">
@@ -10,8 +9,8 @@
       <!-- Blog Entries Column -->
       <div class="col-md-8">
 
-        <h1 class="my-4">Page Heading
-          <small>Secondary Text</small>
+        <h1 class="my-4">Arti
+          <small>Lambang</small>
         </h1>
 
         <!-- Blog Post -->

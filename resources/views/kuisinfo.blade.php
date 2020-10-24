@@ -68,7 +68,7 @@
                     <a href="kuismakanan">Makanan</a>
                   </li>
                   <li>
-                    <a href="kuiswisata">Wisata</a>
+                    <a href="kuisinfo">Wisata</a>
                   </li>
 
                 </ul>
