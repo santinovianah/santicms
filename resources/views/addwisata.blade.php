@@ -1,183 +1,98 @@
+<html>
+<body bgcolor:#44cce2>
 
-<!DOCTYPE html>
-<html lang="en">
+<style type="text/css">
+body{
+  background-color:#44cce2
+}
+nav{
 
-<head>
+background-color: #343a40!important;
+justify-content: space-around;
+height:55px;
+position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
 
-  <title>Blog Home - Start Bootstrap Template</title>
+}
 
-  <!-- Bootstrap core CSS -->
-  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+nav ul{
+  background: #343a40!important;
+  list-style: none;
 
-  <!-- Custom styles for this template -->
-  <link href="css/blog-home.css" rel="stylesheet">
+}
+nav ul li{
+  float: right;
+  
+}
 
-</head>
+nav ul li:hover{
 
-<body>
+}
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="home">Home</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="article">Article</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Page Content -->
-  <div class="container">
 
-    <div class="row">
+nav ul li a{
+  display: flex;
+  padding: 20px;
+  
+  margin-top:-20px;
+  direction: ltr;
+  text-align:right;
+  /* text-indent:200px; */
+  color: #fff;
+  text-decoration: none;
+}
+.tentang{
+	width: 650px;
+	height: 450px;
+	background-color: #fafafa;
+    padding: 33px;
+    border-radius: 20px;
+    margin-left: 50px;
+    margin-top: 80px;
+}
 
-      <!-- Blog Entries Column -->
-      <div class="col-md-8">
+</style>
 
-        <h1 class="my-4">Praktikum 4
-          <small></small>
-        </h1>
-        
-        <!-- Blog Post -->
-        
-        <div class="card mb-4">
-        
-          <div class="card-body">
-          <form action="/wisata/create" method="post">
- @csrf
- <div class="form-group">
- <label for="title">Judul</label>
- <input type="text" class="form-control"
-required="required" name="title"></br>
- </div>
- <div class="form-group">
- <label for="content">Content</label>
- <input type="text" class="form-control"
-required="required" name="content"></br>
- </div>
- <div class="form-group">
- <label for="image">Feature Image</label>
- <input type="text" class="form-control"
-required="required" name="image"></br>
- </div>
- <button type="submit" name="add" class="btn btn-primary float-right">Tambah Data</button>
- </form>
+<nav>
+<p style="color:white; position:absolute;left:50px;">DINAS KEBUDAYAAN DAN PARIWISATA KABUPATEN PASURUAN</p>
+  <ul>
+  <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+      <li><a href="kontak">Kontak</a></li>
+      <li><a href="wisata">Info</a></li>
+      <li><a href="kuisabout">About</a></li>
+      <li><a href="kuishome">Home</a></li>
+  </ul>
+</nav>
+<div class="tentang">
+<form action="/wisata/create" method="post">
+@csrf  
+        <fieldset style=" margin-top:7%;">
+        <legend>Tambah</legend>
+        <p>
+        <label for="title">Judul&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input style="width:100%; height:50px;border: 1px solid grey;border-radius: 20px;"type="text" required="required" name="title">
+        </p>
+        <p>
+        <label for="content">Content&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input style="width:100%; height:50px;border: 1px solid grey;border-radius: 20px;"type="text" class="form-control" required="required" name="content"></br>
+        </p>
+        <p>
+        <label for="image">Feature Image</label>
+        <input style="width:100%; height:50px;border: 1px solid grey;border-radius: 20px;" type="text" class="form-control" required="required" name="image" ></br>
+        </p>
+        <p>
+        <button type="submit" name="add" class="btn btn-primary float-right">Tambah Data</button>
+        </p>
+        </fieldset>
+    </form>
 
-          
-            <h2 class="card-title"></h2>
-            <p class="card-text"></p>
-          </div>
-          <div class="card-footer text-muted">
-          </div>
-        </div>
-
-        
-        <!-- Pagination -->
-        <ul class="pagination justify-content-center mb-4">
-          <li class="page-item">
-            <a class="page-link" href="#">&larr; Older</a>
-          </li>
-          <li class="page-item disabled">
-            <a class="page-link" href="#">Newer &rarr;</a>
-          </li>
-        </ul>
-
-      </div>
-
-      <!-- Sidebar Widgets Column -->
-      <div class="col-md-4">
-
-        <!-- Search Widget -->
-        <div class="card my-4">
-          <h5 class="card-header">Search</h5>
-          <div class="card-body">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search for...">
-              <span class="input-group-append">
-                <button class="btn btn-secondary" type="button">Go!</button>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Categories Widget -->
-        <div class="card my-4">
-          <h5 class="card-header">Categories</h5>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-lg-6">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#">Web Design</a>
-                  </li>
-                  <li>
-                    <a href="#">HTML</a>
-                  </li>
-                  <li>
-                    <a href="#">Freebies</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#">JavaScript</a>
-                  </li>
-                  <li>
-                    <a href="#">CSS</a>
-                  </li>
-                  <li>
-                    <a href="#">Tutorials</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Side Widget -->
-        <div class="card my-4">
-          <h5 class="card-header">Side Widget</h5>
-          <div class="card-body">
-            You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-    <!-- /.row -->
-
-  </div>
-  <!-- /.container -->
-
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
-    </div>
-    <!-- /.container -->
-  </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+</div>
 </body>
-
 </html>
+
+
+
