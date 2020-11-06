@@ -12,6 +12,11 @@ class kuismakananController extends Controller
 	// 	return view('kuismakanan');
     // }
 
+    public function __construct()
+{
+ $this->middleware('auth');
+}
+
     public function kuismakanan(){
         $kuismakanan=DB::table('kuismakanan')->get();
     return view('kuismakanan',['kuismakanan'=>$kuismakanan]);

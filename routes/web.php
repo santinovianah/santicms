@@ -20,6 +20,7 @@ Route::get('/about','AboutController@about');
 Route::get('/article','ArticleController@article');
 
 
+Route::get('/master','MasterController@master');
 Route::get('/kuishome','kuishomeController@kuishome');
 Route::get('/kuisabout','kuisaboutController@kuisabout');
 Route::get('/kuisinfo','kuisinfoController@kuisinfo');

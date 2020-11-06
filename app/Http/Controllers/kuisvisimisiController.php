@@ -10,6 +10,11 @@ class kuisvisimisiController extends Controller
     // public function kuisvisimisi(){
 	// 	return view('kuisvisimisi');
     // }
+    public function __construct()
+{
+ $this->middleware('auth');
+}
+
     public function kuisvisimisi(){
         $kuisvisimisi=DB::table('kuisvisimisi')->get();
     return view('kuisvisimisi',['kuisvisimisi'=>$kuisvisimisi]);

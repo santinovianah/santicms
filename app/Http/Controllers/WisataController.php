@@ -4,8 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Wisata;
+use Illuminate\Support\Facades\Gate;
 class WisataController extends Controller
 {
+    public function __construct()
+    {
+     //$this->middleware('auth');
+     $this->middleware(function($request, $next){
+     if(Gate::allows('manage-wisata')) return $next($request);
+     abort(403, 'Anda tidak memiliki cukup hak akses');
+     });
+    }
+
     public function index()
     {
     $wisata = Wisata::all();

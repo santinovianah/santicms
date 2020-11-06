@@ -54,9 +54,12 @@
             <a class="nav-link" href="kuisabout">About</a>
           </li>
 
-          <li class="nav-item ">
-            <a class="nav-link" href="wisata">info</a>
+          <li class="nav-item {{ Route::is('wisata') ? 'active' : '' }}">
+            @can('manage-wisata')
+            <a class="nav-link" href="{{ route('wisata') }}">Kelola</a>
+            @endcan
           </li>
+
           <li class="nav-item ">
             <a class="nav-link" href="kontak">Kontak</a>
           </li>

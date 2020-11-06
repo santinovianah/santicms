@@ -12,6 +12,10 @@ class kuisinfoController extends Controller
 {
     // public function kuisinfo(){
     // 	return view('kuisinfo');
+    public function __construct()
+{
+ $this->middleware('auth');
+}
     public function kuisinfo(){
         $kuisinfo=DB::table('kuisinfo')->get();
     return view('kuisinfo',['kuisinfo'=>$kuisinfo]);

@@ -8,6 +8,10 @@ use App\kuissejarah;
 
 class kuissejarahController extends Controller
 {
+    public function __construct()
+{
+ $this->middleware('auth');
+}
     
     public function kuissejarah(){
         $kuissejarah=DB::table('kuissejarah')->get();

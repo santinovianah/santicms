@@ -46,21 +46,24 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
         
-          <li class="nav-item ">
-            <a class="nav-link" href="kuissejarah">Home</a>
+                
+        <li class="nav-item ">
+            <a class="nav-link" href="master">Home</a>
           </li>
          
           <li class="nav-item ">
             <a class="nav-link" href="kuisabout">About</a>
           </li>
 
-          <li class="nav-item ">
-            <a class="nav-link" href="wisata">info</a>
+          <li class="nav-item {{ Route::is('wisata') ? 'active' : '' }}">
+            @can('manage-wisata')
+            <a class="nav-link" href="{{ route('wisata') }}">Kelola</a>
+            @endcan
           </li>
+
           <li class="nav-item ">
             <a class="nav-link" href="kontak">Kontak</a>
           </li>
-
           <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
