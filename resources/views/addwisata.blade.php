@@ -68,7 +68,7 @@ nav ul li a{
   </ul>
 </nav>
 <div class="tentang">
-<form action="/wisata/create" method="post">
+<form action="/wisata/create" method="post" enctype="multipart/form-data">
 @csrf  
         <fieldset style=" margin-top:7%;">
         <legend>Tambah</legend>
@@ -82,7 +82,7 @@ nav ul li a{
         </p>
         <p>
         <label for="image">Feature Image</label>
-        <input style="width:100%; height:50px;border: 1px solid grey;border-radius: 20px;" type="text" class="form-control" required="required" name="image" ></br>
+        <input style="width:100%; height:50px;border: 1px solid grey;border-radius: 20px;" type="file" class="form-control" required="required" name="image" ></br>
         </p>
         <p>
         <button type="submit" name="add" class="btn btn-primary float-right">Tambah Data</button>

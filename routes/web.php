@@ -59,4 +59,6 @@ Route::get('/parent/edit/{id}','KontakController@edit');
 Route::post('/kontak/update/{id}','KontakController@update');
 Route::get('/kontak/delete/{id}','KontakController@delete');
 
+Route::get('/wisata/cetak_pdf', 'WisataController@cetak_pdf');
+
 

@@ -20,6 +20,8 @@
         <div class="card mb-4">
           <div class="card-body">
           <a href="wisata/add" class="btn btn-primary">+Tambah Data</a>
+          <a href="/wisata/cetak_pdf" class="btn btn-primary"target="_blank">CETAK PDF</a>
+
 
 <table class="table table-bordered table-striped">
 <thead>

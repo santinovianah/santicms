@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Wisata;
 use Illuminate\Support\Facades\Gate;
+use PDF;
 class WisataController extends Controller
 {
     public function __construct()
@@ -26,15 +27,28 @@ class WisataController extends Controller
     {
     return view('addwisata');
     }
-     public function create(Request $request)
-    {
-    Wisata::create([
-    'title' => $request->title,
-    'content' => $request->content,
-    'featured_image' => $request->image
-    ]);
-    return redirect('/wisata');
-    }
+    //  public function create(Request $request)
+    // {
+    // Wisata::create([
+    // 'title' => $request->title,
+    // 'content' => $request->content,
+    // 'featured_image' => $request->image
+    // ]);
+    // return redirect('/wisata');
+    // }
+
+    public function create(Request $request)
+{
+ if($request->file('image')){
+ $image_name = $request->file('image')->store('images','public');
+ }
+ Wisata::create([
+ 'title' => $request->title,
+ 'content' => $request->content,
+ 'featured_image' => $image_name,
+ ]);
+ return redirect('/wisata');
+}
 
     public function edit($id)
     {
@@ -42,14 +56,23 @@ class WisataController extends Controller
     return view('editwisata',['wisata'=>$wisata]);
     }
     public function update($id, Request $request)
-    {
-    $wisata = Wisata::find($id);
-    $wisata->title = $request->title;
-    $wisata->content = $request->content;
-    $wisata->featured_image = $request->image;
-    $wisata->save();
-    return redirect('/wisata');
-    }
+{
+ $wisata = Wisata::find($id);
+ $wisata->title = $request->title;
+ $wisata->content = $request->content;
+
+ if($wisata->featured_image && file_exists(storage_path('app/public/' . $wisata->featured_image)))
+ {
+  
+ }
+
+ $image_name = $request->file('image')->store('images', 'public');
+ $wisata->featured_image = $image_name;
+ $wisata->save();
+ return redirect('/wisata');
+}
+
+    
 
     public function delete($id)
  {
@@ -58,6 +81,12 @@ class WisataController extends Controller
  return redirect('/wisata');
  }
 
-
+//cetakpdf
+public function cetak_pdf(){
+    $wisata = Wisata::all();
+    $pdf = PDF::loadview('wisatas_pdf',['wisata'=>$wisata]);
+    return $pdf->stream();
+   }
+   
    
 }

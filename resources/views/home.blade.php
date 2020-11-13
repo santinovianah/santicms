@@ -1,5 +1,5 @@
 
-@extends('master')
+@extends('kuishome')
 
 <!-- @section('content')
 <div class="container">

@@ -68,7 +68,7 @@ nav ul li a{
   </ul>
 </nav>
 <div class="tentang">
-<form action="/update/{{$wisata->id}}" method="post">
+<form action="/update/{{$wisata->id}}" method="post" enctype="multipart/form-data">
 {{csrf_field()}}  
 <input type="hidden" name="id" value="{{$wisata->id}}">
         <fieldset style=" margin-top:7%;">
@@ -83,7 +83,8 @@ nav ul li a{
         </p>
         <p>
         <label for="image">Feature Image</label>
-        <input style="width:100%; height:50px;border: 1px solid grey;border-radius: 20px;" type="text" class="form-control" required="required" name="image" value="{{$wisata->featured_image}}"></br>
+        <input type="file" class="form-control" required="required" name="image" id="image" value="{{$wisata->featured_image}}"></br>
+        <img width="150px" src="{{asset('storage/'.$wisata->featured_image)}}">
         </p>
         <p>
         <button type="submit" name="edit" class="btn btn-primary float-right">Ubah Data</button>

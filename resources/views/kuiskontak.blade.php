@@ -29,19 +29,23 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="kuishome">Home
-              <span class="sr-only">(current)</span>
-            </a>
+        <li class="nav-item {{ Route::is('home') ? 'active' : '' }}">
+            @can('manage-display')
+            <a class="nav-link" href="{{ route('home') }}">Home</a>
+            @endcan
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="kuisabout">About</a>
+
+
+          <li class="nav-item {{ Route::is('wisata') ? 'active' : '' }}">
+            @can('manage-wisata')
+            <a class="nav-link" href="{{ route('wisata') }}">Kelola</a>
+            @endcan
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="kuisinfo">Info</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="kuiskontak">Kontak</a>
+
+          <li class="nav-item {{ Route::is('kontak') ? 'active' : '' }}">
+            @can('manage-display')
+            <a class="nav-link" href="{{ route('kontak') }}">Kontak</a>
+            @endcan
           </li>
         </ul>
       </div>

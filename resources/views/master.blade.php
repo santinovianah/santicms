@@ -46,13 +46,15 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
         
-                
-        <li class="nav-item ">
-            <a class="nav-link" href="master">Home</a>
+        <li class="nav-item {{ Route::is('master') ? 'active' : '' }}">
+            @can('manage-display')
+            <a class="nav-link" href="{{ route('master') }}">Home</a>
+            @endcan
           </li>
-         
-          <li class="nav-item ">
-            <a class="nav-link" href="kuisabout">About</a>
+          <li class="nav-item {{ Route::is('kuisabout') ? 'active' : '' }}">
+            @can('manage-display')
+            <a class="nav-link" href="{{ route('kuisabout') }}">About</a>
+            @endcan
           </li>
 
           <li class="nav-item {{ Route::is('wisata') ? 'active' : '' }}">
@@ -61,9 +63,12 @@
             @endcan
           </li>
 
-          <li class="nav-item ">
-            <a class="nav-link" href="kontak">Kontak</a>
+          <li class="nav-item {{ Route::is('kontak') ? 'active' : '' }}">
+            @can('manage-display')
+            <a class="nav-link" href="{{ route('kontak') }}">Kontak</a>
+            @endcan
           </li>
+
           <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
