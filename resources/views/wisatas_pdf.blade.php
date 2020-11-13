@@ -7,8 +7,13 @@
 <style type="text/css">
 table tr td,
 table tr th{
-font-size: 9pt;
+font-size: 10pt;
 }
+table{
+    border:2px;
+}
+
+
 </style>
 <center>
 <h5>Laporan Artikel</h4>
@@ -29,7 +34,7 @@ font-size: 9pt;
 <td>{{ $i++ }}</td>
 <td>{{$w->title}}</td>
 <td>{{$w->content}}</td>
-<td>{{$w->featured_image}}</td>
+<td>{{asset('storage/'.$w->featured_image)}}</td>
 </tr>
 @endforeach
 </tbody>
