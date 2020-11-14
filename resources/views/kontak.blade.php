@@ -9,8 +9,8 @@
       <!-- Blog Entries Column -->
       <div class="col-md-8">
 
-        <h1 class="my-4">Arti
-          <small>Lambang</small>
+        <h1 class="my-4">
+          <small>Arti Lambang</small>
         </h1>
 
         <!-- Blog Post -->
