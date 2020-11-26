@@ -59,14 +59,14 @@
           </li>
 
           <li class="nav-item {{ Route::is('wisata') ? 'active' : '' }}">
-            @can('manage-admin')
+            @can('manage-wisata')
             <a class="nav-link" href="{{('wisata') }}">Kelola</a>
             @endcan
           </li>
 
-          <li class="nav-item {{ Route::is('user') ? 'active' : '' }}">
-            @can('manage-admin')
-            <a class="nav-link" href="{{('user') }}">User</a>
+          <li class="nav-item {{ Route::is('us') ? 'active' : '' }}">
+            @can('manage-user')
+            <a class="nav-link" href="{{('us') }}">User</a>
             @endcan
           </li>
 
@@ -75,13 +75,13 @@
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="login"
+                                    <a class="dropdown-item" href='login'
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                                      {{ __('Logout') }}
                                     </a>
  
-
+                                    <!-- <a class="dropdown-item" href='user'>User</a> -->
                                     <form id="logout-form" action="{{ ('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
@@ -96,7 +96,7 @@
   
   <h>
 
-@yield('profile')
+@yield('home')
 @yield('user')
 @yield('kuisabout')
 @yield('kuisinfo')

@@ -11,20 +11,20 @@
       
       <div class="col-md-8">
 
-        <h1 class="my-4">Wisata
-          <small>Wajib di Kunjungi</small>
+        <h1 class="my-4">User
+          <small></small>
         </h1>
         
         <!-- Blog Post -->
 
         <div class="card mb-4">
           <div class="card-body">
-          <a href="user/add" class="btn btn-primary">+Tambah Data</a>
-          <a href="/wisata/cetak_pdf" class="btn btn-primary"target="_blank">CETAK PDF</a>
+          <a href="/us/cetak_pdfus" class="btn btn-primary"target="_blank">CETAK PDF</a>
 
 
 <table class="table table-bordered table-striped">
 <thead>
+
 <tr>
 <th>No</th>
 <th>Nama</th>
@@ -34,13 +34,13 @@
 </tr>
 </thead>
 <tbody>
-@foreach($user as $u)
+@foreach($us as $u)
 <tr>
 <td>{{$u->id}}</td>
 <td>{{$u->name}}</td>
 <td>{{$u->email}}</td>
 <td><img width="150px" src="{{asset('storage/'.$u->featured_image)}}"></td>
-<td><a href="user/edit/{{ $u->id }}" ><img src="img/editt.png"></td>
+<td><a href="us/edit/{{ $u->id }}" ><img src="img/editt.png">
 
 </tr>
 @endforeach
@@ -131,7 +131,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+      <p class="m-0 text-center text-white">Copyright &copy; Santi Novianah 2020</p>
     </div>
     <!-- /.container -->
   </footer>

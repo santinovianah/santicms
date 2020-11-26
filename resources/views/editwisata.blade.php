@@ -57,7 +57,7 @@ nav ul li a{
 
 </style>
 
-<nav>
+<!-- <nav>
 <p style="color:white; position:absolute;left:50px;">DINAS KEBUDAYAAN DAN PARIWISATA KABUPATEN PASURUAN</p>
   <ul>
   <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
@@ -66,12 +66,12 @@ nav ul li a{
       <li><a href="kuisabout">About</a></li>
       <li><a href="kuishome">Home</a></li>
   </ul>
-</nav>
+</nav> -->
 <div class="tentang">
-<form action="/update/{{$wisata->id}}" method="post" enctype="multipart/form-data">
+<form action="/wisata/update/{{$wisata->id}}" method="post" enctype="multipart/form-data">
 {{csrf_field()}}  
 <input type="hidden" name="id" value="{{$wisata->id}}">
-        <fieldset style=" margin-top:7%;">
+        <fieldset>
         <legend>Edit</legend>
         <p>
         <label for="title">Judul&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>

@@ -48,8 +48,8 @@ Route::get('/wisata', 'WisataController@index')->name('wisata');
 Route::get('/wisata/add','WisataController@add');
 Route::post('/wisata/create','WisataController@create');
 Route::get('/wisata/edit/{id}','WisataController@edit')->name('edit');
-Route::post('/update/{id}','WisataController@update');
-Route::get('/delete/{id}','WisataController@delete');
+Route::post('/wisata/update/{id}','WisataController@update');
+Route::get('/wisata/delete/{id}','WisataController@delete');
 
 // kontak
 Route::get('/kontak', 'KontakController@kontak')->name('kontak');
@@ -65,12 +65,16 @@ Route::get('/visimisi','VisimisiController@visimisi');
 Route::get('/visimisi/cetak_pdfvisimisi', 'VisimisiController@cetak_pdfvisimisi');
 
 //profile
-Route::get('/user', 'UserController@index');
-Route::get('/user/add','UserController@add');
-Route::post('/user/create','UserController@user');
-Route::get('/user/edit/{id}','UserController@edit')->name('edit');
-Route::post('/update/{id}','UserController@update');
+Route::get('/us', 'UsController@index');
+Route::get('/us/add','UsController@add');
+Route::post('/us/create','UsController@user');
+Route::get('/us/edit/{id}','UsController@edit');
+Route::post('/update/{id}','UsController@update');
+Route::get('/delete/{id}','WisataController@delete');
 // Route::get('profile', 'ProfileController@edit');
+
+//cetakuser
+Route::get('/us/cetak_pdfus', 'UsController@cetak_pdfus');
 
 
 

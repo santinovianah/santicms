@@ -27,7 +27,7 @@ table{
 <td>{{ $i++ }}</td>
 <td>{{$w->title}}</td>
 <td>{{$w->content}}</td>
-<td><img width="150px" src="{{asset('storage/'.$w->featured_image)}}"></td>
+
 </tr>
 @endforeach
 </tbody>

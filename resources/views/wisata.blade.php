@@ -11,8 +11,8 @@
       
       <div class="col-md-8">
 
-        <h1 class="my-4">Wisata
-          <small>Wajib di Kunjungi</small>
+        <h1 class="my-4">Kelola
+          <small></small>
         </h1>
         
         <!-- Blog Post -->
@@ -39,7 +39,7 @@
 <td>{{$a->title}}</td>
 <td>{{$a->created_at}}</td>
 <td><a href="wisata/edit/{{ $a->id }}" ><img src="img/editt.png">
-<a href="delete/{{ $a->id }}" ><img src="img/hapuss.png"></td>
+<a href="wisata/delete/{{ $a->id }}" ><img src="img/hapuss.png"></td>
 
 </tr>
 @endforeach

@@ -12,7 +12,7 @@ class WisataController extends Controller
     {
      //$this->middleware('auth');
      $this->middleware(function($request, $next){
-     if(Gate::allows('manage-admin')) return $next($request);
+     if(Gate::allows('manage-wisata')) return $next($request);
      abort(403, 'Anda tidak memiliki cukup hak akses');
      });
     }

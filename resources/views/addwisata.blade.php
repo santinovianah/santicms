@@ -1,3 +1,4 @@
+
 <html>
 <body bgcolor:#44cce2>
 
@@ -57,16 +58,15 @@ nav ul li a{
 
 </style>
 
-<nav>
+<!-- <nav>
 <p style="color:white; position:absolute;left:50px;">DINAS KEBUDAYAAN DAN PARIWISATA KABUPATEN PASURUAN</p>
   <ul>
   <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-      <li><a href="kontak">Kontak</a></li>
-      <li><a href="wisata">Info</a></li>
-      <li><a href="kuisabout">About</a></li>
-      <li><a href="kuishome">Home</a></li>
+  <li><a href="user">User</a></li>
+      <li><a href="wisata">Kelola</a></li>
+
   </ul>
-</nav>
+</nav> -->
 <div class="tentang">
 <form action="/wisata/create" method="post" enctype="multipart/form-data">
 @csrf  

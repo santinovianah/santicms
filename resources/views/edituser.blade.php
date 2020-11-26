@@ -51,12 +51,13 @@ nav ul li a{
 	background-color: #fafafa;
     padding: 33px;
     border-radius: 20px;
-    margin-left: 50px;
+
+    margin-left: 250px;
     margin-top: 80px;
 }
 
 </style>
-
+<!-- 
 <nav>
 <p style="color:white; position:absolute;left:50px;">DINAS KEBUDAYAAN DAN PARIWISATA KABUPATEN PASURUAN</p>
   <ul>
@@ -66,25 +67,25 @@ nav ul li a{
       <li><a href="kuisabout">About</a></li>
       <li><a href="kuishome">Home</a></li>
   </ul>
-</nav>
+</nav> -->
 <div class="tentang">
-<form action="/update/{{$user->id}}" method="post" enctype="multipart/form-data">
+<form action="/update/{{$us->id}}" method="post" enctype="multipart/form-data">
 {{csrf_field()}}  
-<input type="hidden" name="id" value="{{$user->id}}">
-        <fieldset style=" margin-top:7%;">
+<input type="hidden" name="id" value="{{$us->id}}">
+        <fieldset >
         <legend>Edit</legend>
         <p>
         <label for="name">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-        <input style="width:100%; height:50px;border: 1px solid grey;border-radius: 20px;"type="text" required="required" name="name" value="{{$user->name}}">
+        <input style="width:100%; height:50px;border: 1px solid grey;border-radius: 20px;"type="text" required="required" name="name" value="{{$us->name}}">
         </p>
         <p>
         <label for="email">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-        <input style="width:100%; height:50px;border: 1px solid grey;border-radius: 20px;"type="text" class="form-control" required="required" name="email" value="{{$user->email}}"></br>
+        <input style="width:100%; height:50px;border: 1px solid grey;border-radius: 20px;"type="text" class="form-control" required="required" name="email" value="{{$us->email}}"></br>
         </p>
         <p>
         <label for="image">Feature Image</label>
-        <input type="file" class="form-control" required="required" name="image" id="image" value="{{$user->featured_image}}"></br>
-        <img width="150px" src="{{asset('storage/'.$user->featured_image)}}">
+        <input type="file" class="form-control" required="required" name="image" id="image" value="{{$us->featured_image}}"></br>
+        <img width="150px" src="{{asset('storage/'.$us->featured_image)}}">
         </p>
         <p>
         <button type="submit" name="edit" class="btn btn-primary float-right">Ubah Profil</button>
