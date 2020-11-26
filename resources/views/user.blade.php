@@ -1,10 +1,8 @@
 @extends('kuishome')
-@section('kuisinfo')
 
-
-
+@section('user')
  <!-- Page Content -->
- @yield('title')
+
   <div class="container">
 
     <div class="row">
@@ -13,23 +11,47 @@
       
       <div class="col-md-8">
 
-        <h1 class="my-4">3 Wisata
+        <h1 class="my-4">Wisata
           <small>Wajib di Kunjungi</small>
         </h1>
         
         <!-- Blog Post -->
-        @foreach($kuisinfo as $ki)
+
         <div class="card mb-4">
           <div class="card-body">
-          <img class="card-img-top" src="{{$ki->featured_image}}" alt="Card image cap">
-            <h2 class="card-title">{{$ki->title}}</h2>
-            <p class="card-text">{{$ki->content}}</p>
+          <a href="user/add" class="btn btn-primary">+Tambah Data</a>
+          <a href="/wisata/cetak_pdf" class="btn btn-primary"target="_blank">CETAK PDF</a>
+
+
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<th>No</th>
+<th>Nama</th>
+<th>Email</th>
+<th>Foto</th>
+<th>Edit Profil</th>
+</tr>
+</thead>
+<tbody>
+@foreach($user as $u)
+<tr>
+<td>{{$u->id}}</td>
+<td>{{$u->name}}</td>
+<td>{{$u->email}}</td>
+<td><img width="150px" src="{{asset('storage/'.$u->featured_image)}}"></td>
+<td><a href="user/edit/{{ $u->id }}" ><img src="img/editt.png"></td>
+
+</tr>
+@endforeach
+</tbody>
+</table>
+            <h2 class="card-title"></h2>
+            <p class="card-text"></p>
             
           </div>
           
         </div>
-        
-        @endforeach
 
         
         
@@ -37,7 +59,7 @@
         <!-- Pagination -->
         <ul class="pagination justify-content-center mb-4">
 
-      
+        
 
       </div>
 
@@ -79,7 +101,7 @@
                     <a href="kuissejarah">Sejarah</a>
                   </li>
                   <li>
-                    <a href="visimisi">Visi Misi</a>
+                    <a href="kuisvisimisi">Visi Misi</a>
                   </li>
                   
                 </ul>
@@ -113,6 +135,5 @@
     </div>
     <!-- /.container -->
   </footer>
-
 
 @endsection

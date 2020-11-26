@@ -20,14 +20,20 @@ table{
 </center>
 <table class='table table-bordered'>
 <thead>
-
+<tr>
+<th>No</th>
+<th>Judul</th>
+<th>Isi</th>
+<th>Gambar</th>
+</tr>
+</thead>
+<tbody>
 @php $i=1 @endphp
-@foreach($wisata as $w)
+@foreach($visimisi as $v)
 <tr>
 <td>{{ $i++ }}</td>
-<td>{{$w->title}}</td>
-<td>{{$w->content}}</td>
-<td><img width="150px" src="{{asset('storage/'.$w->featured_image)}}"></td>
+<td>{{$v->title}}</td>
+<td>{{$v->content}}</td>
 </tr>
 @endforeach
 </tbody>

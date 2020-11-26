@@ -60,5 +60,19 @@ Route::post('/kontak/update/{id}','KontakController@update');
 Route::get('/kontak/delete/{id}','KontakController@delete');
 
 Route::get('/wisata/cetak_pdf', 'WisataController@cetak_pdf');
+// Route::get('/visimisi/cetak_pdfvisimisi', 'VisimisiController@cetak_pdfvisimisi');
+Route::get('/visimisi','VisimisiController@visimisi');
+Route::get('/visimisi/cetak_pdfvisimisi', 'VisimisiController@cetak_pdfvisimisi');
+
+//profile
+Route::get('/user', 'UserController@index');
+Route::get('/user/add','UserController@add');
+Route::post('/user/create','UserController@user');
+Route::get('/user/edit/{id}','UserController@edit')->name('edit');
+Route::post('/update/{id}','UserController@update');
+// Route::get('profile', 'ProfileController@edit');
+
+
+
 
 

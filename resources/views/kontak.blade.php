@@ -141,7 +141,7 @@ required="required" name="title"></br>
                 <a href="kuissejarah">Sejarah</a>
               </li>
               <li>
-                <a href="kuisvisimisi">Visi Misi</a>
+                <a href="visimisi">Visi Misi</a>
               </li>
 
             </ul>

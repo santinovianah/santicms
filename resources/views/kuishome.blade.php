@@ -52,18 +52,24 @@
             @endcan
           </li>
 
-
-          <li class="nav-item {{ Route::is('wisata') ? 'active' : '' }}">
-            @can('manage-wisata')
-            <a class="nav-link" href="{{ route('wisata') }}">Kelola</a>
-            @endcan
-          </li>
-
           <li class="nav-item {{ Route::is('kontak') ? 'active' : '' }}">
             @can('manage-display')
             <a class="nav-link" href="{{ route('kontak') }}">Kontak</a>
             @endcan
           </li>
+
+          <li class="nav-item {{ Route::is('wisata') ? 'active' : '' }}">
+            @can('manage-admin')
+            <a class="nav-link" href="{{('wisata') }}">Kelola</a>
+            @endcan
+          </li>
+
+          <li class="nav-item {{ Route::is('user') ? 'active' : '' }}">
+            @can('manage-admin')
+            <a class="nav-link" href="{{('user') }}">User</a>
+            @endcan
+          </li>
+
           <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -74,8 +80,9 @@
                                                      document.getElementById('logout-form').submit();">
                                                      {{ __('Logout') }}
                                     </a>
+ 
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    <form id="logout-form" action="{{ ('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
                                 </div>
@@ -89,12 +96,14 @@
   
   <h>
 
+@yield('profile')
+@yield('user')
 @yield('kuisabout')
 @yield('kuisinfo')
 @yield('kuismakanan')
 @yield('kuissejarah')
 @yield('wisata')
-@yield('kuisvisimisi')
+@yield('visimisi')
 @yield('kontak')
 
 @yield('editwisata')

@@ -1,5 +1,5 @@
 @extends('kuishome')
-@section('kuisvisimisi')
+@section('visimisi')
 <!-- Page Content -->
 
 <div class="container">
@@ -9,8 +9,8 @@
   <!-- Blog Entries Column -->
   
   <div class="col-md-8">
-  <h1 class="my-4">Sejarah
-          <small>Kabupaten Pasuruan</small>
+  <h1 class="my-4">
+          <small>Visi Misi</small>
         </h1>
 
 <!-- Date/Time -->
@@ -31,14 +31,14 @@
         <p>"Menuju Kabupaten Pasuruan yang Sejahtera, Maslahat dan Berdaya Saing"</p>
         
         <p class="lead">Misi</p>
-        @foreach($kuisvisimisi as $kvm)
-        <p>{{$kvm->id}}. {{$kvm->content}}</p>
+        @foreach($Visimisis as $v)
+        <p>{{$v->id}}. {{$v->content}}</p>
 
         </p>
 
         
 @endforeach
-<a href="/kuisvisimisi/cetak_pdfvisimisi" class="btn btn-primary"target="_blank">CETAK PDF</a>
+<a href="/visimisi/cetak_pdfvisimisi" class="btn btn-primary"target="_blank">CETAK PDF</a>
 
         
         <h2 class="card-title"></h2>
